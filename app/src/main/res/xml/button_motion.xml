@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@id/start"
+        app:duration="500">
+        <OnClick
+            app:clickAction="toggle"
+            app:targetId="@id/btn" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                app:attributeName="text"
+                app:customStringValue="Giãn ra"/>
+            <CustomAttribute
+                app:attributeName="backgroundColor"
+                app:customColorValue="#00BCD4"/>
+            <CustomAttribute
+                app:attributeName="textColor"
+                app:customColorValue="#fff"/>
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@id/btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <CustomAttribute
+                app:attributeName="text"
+                app:customStringValue="Co lại"/>
+            <CustomAttribute
+                app:attributeName="backgroundColor"
+                app:customColorValue="#AF19C9"/>
+            <CustomAttribute
+                app:attributeName="textColor"
+                app:customColorValue="#FFEB3B"/>
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>
